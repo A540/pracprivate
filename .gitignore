@@ -80,7 +80,7 @@ fabric.properties
 .venv/
 
 #django-envrion
-.env/
+.env
 
 #db
 db.sqlite3
