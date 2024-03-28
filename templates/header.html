@@ -3,21 +3,21 @@
         <h1 class="private-logo">Private</h1>
     </div>
     <div>
-        <span>nav1</span>
-        <span>nav2</span>
-        <span>nav3</span>
-        {% if not user.is_authenticated %}
-            <form action="{% url 'accountapp:login' %}">
-                {#                {% csrf_token %}#}
-                <input type="submit" class="btn btn-dark rounded-pill col-0 mt-3" value="login"/>
-            </form>
-        {% else %}
-            <form action="{% url 'accountapp:logout' %}" method="post">
-                {% csrf_token %}
-                <input type="submit" class="btn btn-dark rounded-pill col-0 mt-3" value="logout"/>
-            </form>
-        {% endif %}
-
-
+        <div style="display: flex; flex-direction: row; justify-content: center">
+            {% if not user.is_authenticated %}
+                <form action="{% url 'accountapp:login' %}">
+                    {#                {% csrf_token %}#}
+                    <input type="submit" class="btn btn-dark rounded-pill col-0 mt-3" value="login"/>
+                </form>
+            {% else %}
+                <form action="{% url 'accountapp:detail' pk=user.pk %}">
+                    <input type="submit" class="btn btn-dark rounded-pill col-0 m-1" value="MyPage"/>
+                </form>
+                <form action="{% url 'accountapp:logout' %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" class="btn btn-dark rounded-pill col-0 m-1" value="logout"/>
+                </form>
+            {% endif %}
+        </div>
     </div>
 </div>
