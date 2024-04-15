@@ -7,6 +7,9 @@
             <form action="{% url 'articleapp:list' %}">
                 <input type="submit" class="btn btn-dark rounded-pill col-0 m-1" value="Articles"/>
             </form>
+            <form action="{% url 'projectapp:list' %}">
+                <input type="submit" class="btn btn-dark rounded-pill col-0 m-1" value="Projects"/>
+            </form>
             {#비 로그인 상태일 경우#}
             {% if not user.is_authenticated %}
                 {#로그인 버튼#}
