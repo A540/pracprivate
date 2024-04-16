@@ -26,6 +26,9 @@
                 <form action="{% url 'accountapp:detail' pk=user.pk %}">
                     <input type="submit" class="btn btn-dark rounded-pill col-0 m-1" value="MyPage"/>
                 </form>
+                <form action="{% url 'subscribeapp:list' %}">
+                    <input type="submit" class="btn btn-dark rounded-pill col-0 m-1" value="Subscription"/>
+                </form>
                 {#로그아웃 버튼#}
                 <form action="{% url 'accountapp:logout' %}" method="post">
                     {% csrf_token %}
