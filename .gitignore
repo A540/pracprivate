@@ -89,7 +89,11 @@ __pycache__/
 
 .idea/
 
-media/
+media/articles/
+
+media/profile/
+
+media/project/
 
 Dockerfile
 
